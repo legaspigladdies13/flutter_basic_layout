@@ -10,19 +10,19 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Placeholder(),
+      home: HomePage(),
     );
   }
 }
 
-class HomePAGE extends StatefulWidget {
-  const HomePAGE({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<HomePAGE> createState() => _HomePAGEState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePAGEState extends State<HomePAGE> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,13 +31,15 @@ class _HomePAGEState extends State<HomePAGE> {
       ),
       body: const Center(
         child: Text(
-          'Hello World!',
+          'Hellow World',
           style: TextStyle(fontSize: 40),
         ),
       ),
       drawer: Drawer(),
       floatingActionButton: FloatingActionButton(onPressed: null),
-      bottomNavigationBar: BottomAppBar(),
+      bottomNavigationBar: BottomAppBar(
+        color: const Color.fromARGB(255, 188, 187, 187),
+      ),
     );
   }
 }
